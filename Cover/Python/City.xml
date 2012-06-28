@@ -1,0 +1,45 @@
+
+<rules max_depth="300">
+    <rule name="entry">
+      <call rule="spiral"/>
+      <call rule="spiral"/>
+      <!--call transforms="ry 180" rule="arm"/-->
+    </rule>
+    <rule name="spiral" weight="100">
+      <instance shape="box"/>
+      <call transforms="ty 0.4 rx 90 sa 0.995" rule="spiral"/>
+    </rule>
+    <rule name="spiral" weight="100">
+      <instance shape="box"/>
+      <call transforms="ty 0.4 rx 90 rz -90 sa 0.995" rule="spiral"/>
+    </rule>
+    <rule name="spiral" weight="100">
+      <instance shape="box"/>
+      <call transforms="ty 0.4 rx 90 rz 90 sa 0.995" rule="spiral"/>
+    </rule>
+    <rule name="spiral" weight="3">
+      <call transforms="rx 90 s 1 1.125 1" rule="spiral"/>
+      <call transforms="ry 180 s 1 0.7 1" rule="spiral"/>
+    </rule>
+
+
+    <rule name="arm" weight="100">
+        <instance shape="box"/>
+        <call transforms="ty 0.5 rx 4 sa 0.93" rule="arm"/>
+    </rule>
+    <rule name="arm" weight="100">
+        <instance shape="box"/>
+        <call transforms="ty 0.5 rx 4 ry 4 sa 0.93" rule="arm"/>
+    </rule>
+    <rule name="arm" weight="100">
+        <instance shape="box"/>
+        <call transforms="ty 0.5 rx 4 rz -4 sa 0.93" rule="arm"/>
+    </rule>
+
+    <!--rule name="arm" weight="6">
+        <call transforms="rx 15" rule="arm"/>
+        <call transforms="ry 180" rule="arm"/>
+    </rule-->
+
+</rules>
+

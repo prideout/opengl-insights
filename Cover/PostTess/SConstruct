@@ -1,0 +1,49 @@
+# Clean:
+#  > scons -c
+#
+# Debug configuration:
+#  > scons debug=1
+#
+# Parallel build:
+#  > scons -j 4
+
+import sys
+import os
+
+source = Split("""
+  PostTess.c
+  glew.c
+  pez.c
+""")
+
+env = Environment(ENV = os.environ)
+
+env.Program('PostTess', source)
+env.Append(CPPPATH = '.')
+
+UseMingw = True
+
+if sys.platform == 'win32':
+    prman = "c:\Program Files\Pixar\RenderManProServer-16.0"
+    env.Append(LIBPATH=prman + '\\lib')
+    env.Append(CPPPATH=[prman + '\\include'])
+    env.Append(CPPDEFINES=['WIN32'])
+    env.Append(LIBS=Split('opengl32 Gdi32 Comdlg32 liblibprman'))
+    env.Append(LINKFLAGS = [ "-m64" ])
+    if UseMingw:
+        Tool('mingw')(env)
+        env.Append(CCFLAGS = '-Wl,--subsystem,windows')
+    else:
+        env.Append(CPPDEFINES=['inline=__inline'])
+else:
+    env.Append(LIBS=Split('X11 GL'))
+
+if env['CC'] == 'gcc':
+    if sys.platform != 'win32':
+        env.Replace(CC = '/usr/bin/colorgcc')
+    env.Append(CPPDEFINES=['inline=__inline'])
+    env.Replace(CCFLAGS = Split('-std=c99 -Wc++-compat'))
+
+if ARGUMENTS.get('debug', 0):
+     env.Append(CCFLAGS = '-g')
+
