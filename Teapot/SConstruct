@@ -1,0 +1,42 @@
+
+# Clean:
+#  > scons -c
+#
+# Debug configuration:
+#  > scons debug=1
+#
+# Parallel build:
+#  > scons -j 4
+
+import sys
+import os
+
+source = Split("""
+  Teapot.c
+  glew.c
+  pez.c
+""")
+
+env = Environment(ENV = os.environ)
+
+env.Program('Teapot', source)
+env.Append(CPPPATH = '.')
+
+if sys.platform == 'win32':
+    env.Append(CPPDEFINES=['WIN32'])
+    env.Append(CCFLAGS = '-Wl,--subsystem,windows')
+    env.Append(LIBS=Split('opengl32 Gdi32 Comdlg32'))
+    Tool('mingw')(env)
+else:
+    env.Append(LIBS=Split('X11 GL'))
+
+if env['CC'] is 'gcc':
+    colorgcc = '/usr/bin/colorgcc'
+    if os.path.exists(colorgcc):
+        env.Replace(CC = colorgcc)
+    env.Append(CPPDEFINES=['inline=__inline'])
+    env.Replace(CCFLAGS = Split('-std=c99 -Wc++-compat'))
+
+if ARGUMENTS.get('debug', 0):
+   env.Append(CCFLAGS = '-g')
+

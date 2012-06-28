@@ -1,0 +1,19 @@
+Format 800 600 1
+Display "elephant" "framebuffer" "rgba"
+PixelSamples 4 4
+ShadingRate .25
+Exposure 1 2.2
+Projection "perspective" "fov" 5
+Translate 0 0 65
+WorldBegin
+LightSource "distantlight" 2 "intensity" 1.0 "from" [-4 6 -100] "to" [0 0 0] "lightcolor" [1.0 1.0 1.0]
+AttributeBegin
+Surface "paintedplastic"
+Color 0.02 0.8 1.0
+Translate -2.25 -1.85 -3
+Rotate -30 0 1 0
+Rotate -90 1 0 0
+Scale .2 .2 .2
+ReadArchive "gumbo.rib"
+AttributeEnd
+WorldEnd

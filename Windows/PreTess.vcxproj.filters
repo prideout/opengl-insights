@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="AntTweakBar">
+      <UniqueIdentifier>{27f2b508-f514-4cb7-9a34-422154caebb3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Cover\PreTess\glew.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Cover\PreTess\pez.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Cover\PreTess\PreTess.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\AntTweakBar\TwEventWin.c">
+      <Filter>AntTweakBar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\AntTweakBar\LoadOGL.cpp">
+      <Filter>AntTweakBar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\AntTweakBar\LoadOGLCore.cpp">
+      <Filter>AntTweakBar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\AntTweakBar\TwBar.cpp">
+      <Filter>AntTweakBar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\AntTweakBar\TwColors.cpp">
+      <Filter>AntTweakBar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\AntTweakBar\TwFonts.cpp">
+      <Filter>AntTweakBar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\AntTweakBar\TwMgr.cpp">
+      <Filter>AntTweakBar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\AntTweakBar\TwOpenGL.cpp">
+      <Filter>AntTweakBar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\AntTweakBar\TwOpenGLCore.cpp">
+      <Filter>AntTweakBar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\AntTweakBar\TwPrecomp.cpp">
+      <Filter>AntTweakBar</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Cover\PreTess\glew.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Cover\PreTess\pez.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Cover\PreTess\vmath.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AntTweakBar\AntPerfTimer.h">
+      <Filter>AntTweakBar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AntTweakBar\AntTweakBar.h">
+      <Filter>AntTweakBar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AntTweakBar\LoadOGL.h">
+      <Filter>AntTweakBar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AntTweakBar\LoadOGLCore.h">
+      <Filter>AntTweakBar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AntTweakBar\resource.h">
+      <Filter>AntTweakBar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AntTweakBar\TwBar.h">
+      <Filter>AntTweakBar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AntTweakBar\TwColors.h">
+      <Filter>AntTweakBar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AntTweakBar\TwFonts.h">
+      <Filter>AntTweakBar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AntTweakBar\TwGraph.h">
+      <Filter>AntTweakBar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AntTweakBar\TwMgr.h">
+      <Filter>AntTweakBar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AntTweakBar\TwOpenGL.h">
+      <Filter>AntTweakBar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AntTweakBar\TwOpenGLCore.h">
+      <Filter>AntTweakBar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AntTweakBar\TwPrecomp.h">
+      <Filter>AntTweakBar</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Cover\PreTess\PreTess.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+  </ItemGroup>
+</Project>
