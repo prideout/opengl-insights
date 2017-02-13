@@ -1,4 +1,4 @@
-This code has been tested on Windows 7 and Linux.  It's easiest to build using [scons](www.scons.org).
+This code has been tested on Windows 7 and Linux.  It's easiest to build using [scons](http://www.scons.org).
 
 * See the **Windows** folder if you need to build using Visual Studio.
 * The **Cover/PostTess** folder contains source for cylindrical warping.
